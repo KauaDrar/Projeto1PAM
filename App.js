@@ -29,7 +29,7 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <Text style={styles.texto}>Olá Mundo!</Text>
+      <Text style={styles.texto}>CALCULADORA</Text>
       <View style={styles.bloco}>
         <Text style={styles.textBlock}>Valor 1</Text>
         <TextInput
@@ -50,40 +50,35 @@ export default function App() {
         />
       </View>
 
-      <View style={styles.bloco}>
+      <View style={styles.operacoes}>
       <TouchableOpacity
       style={styles.button}
       onPress = {Somar}>
 
-      <Text style={styles.textButton}>Somar</Text>
+      <Text style={styles.textButton}>+</Text>
       </TouchableOpacity>
-      </View>
 
-      <View style={styles.bloco}>
       <TouchableOpacity
       style={styles.button}
       onPress = {Subtracao}>
 
-      <Text style={styles.textButton}>Subtrair</Text>
+      <Text style={styles.textButton}>-</Text>
       </TouchableOpacity>
-      </View>
 
-      <View style={styles.bloco}>
       <TouchableOpacity
       style={styles.button}
       onPress = {Multiplicacao}>
 
-      <Text style={styles.textButton}>Multiplicar</Text>
+      <Text style={styles.textButton}>×</Text>
       </TouchableOpacity>
-      </View>
 
-      <View style={styles.bloco}>
       <TouchableOpacity
       style={styles.button}
       onPress = {Divisao}>
 
-      <Text style={styles.textButton}>Dividir</Text>
+      <Text style={styles.textButton}>÷</Text>
       </TouchableOpacity>
+
       </View>
       
       <View style={styles.bloco}>
@@ -120,7 +115,15 @@ const styles = StyleSheet.create({
   },
   textBlock: {
     color: '#FFF',
-    fontSize: 20,
+    fontSize: 26,
+  },
+  operacoes: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 30,
+    width: '100%',
+    flexDirection: 'row'
   },
   button: {
     margin: 5,
@@ -128,9 +131,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     width: '80%',
     borderRadius: 5,
+    width: 50
   },
   textButton: {
     color: '#000',
-    fontSize: 20,
+    fontSize: 40,
   }
 });
